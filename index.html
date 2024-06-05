@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+</head>
+<body>
+
+    <ul id="list"></ul>
+
+    <script>
+        const listOfUrl = [
+            "http://localhost:5000/small",
+            "http://localhost:5000/small",
+            "http://localhost:5000/small",
+            "http://localhost:5000/big",
+            "http://localhost:5000/big",
+            "http://localhost:5000/small",
+            "http://localhost:5000/small",
+        ];
+
+        const listItem = document.getElementById('list');
+
+        for (const url of listOfUrl) {
+            axios.get(url).then((response) => {
+                const li = document.createElement('li');
+                li.textContent = response.data;
+                listItem.appendChild(li);
+            });
+        }
+    </script>
+    
+</body>
+</html>

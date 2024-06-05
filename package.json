@@ -1,0 +1,17 @@
+{
+  "name": "worker-pool-in-node",
+  "version": "1.0.0",
+  "description": "threading in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepakkumar-Maurya",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "worker-pool": "^0.1.0",
+    "workerpool": "^9.1.0"
+  }
+}
